@@ -1,0 +1,49 @@
+{
+ "name": "google-voice-for-desktop",
+ "version": "1.0",
+ "description": "A desktop app for google voice.",
+ "main": "src/main.js",
+ "build": {
+  "appId": "com.gitoverhere.googlevoice",
+  "productName": "Voice Desktop",
+  "mac": {
+   "category": "public.app-category.social-networking"
+  },
+  "dmg": {
+   "icon": false
+  },
+  "linux": {
+   "target": [
+    "AppImage"
+   ],
+   "category": "Office"
+  }
+ },
+ "scripts": {
+  "start": "electron .",
+  "postinstall": "electron-builder install-app-deps",
+  "build:windows": "electron-builder --windows",
+  "build:mac": "electron-builder --mac",
+  "build:linux": "electron-builder --linux",
+  "release": "electron-builder --mac --windows --linux --publish always"
+ },
+ "keywords": [
+  "epic",
+  "electron",
+  "voice",
+  "wrapper",
+  "desktop",
+  "google"
+ ],
+ "author": "GitOverHere",
+ "license": "MIT",
+ "dependencies": {
+  "electron-context-menu": "^2.3.0",
+  "electron-store": "^6.0.1",
+  "sass": "^1.29.0"
+ },
+ "devDependencies": {
+  "electron": "^10.4.7",
+  "electron-builder": "^22.9.1"
+ }
+}
